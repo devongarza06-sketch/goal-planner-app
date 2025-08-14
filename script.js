@@ -405,6 +405,47 @@ function renderPersonDetails(container, dir) {
   ul.appendChild(renderTree(dir.tree));
   treeContainer.appendChild(ul);
   container.appendChild(treeContainer);
+
+  // Append static AID board for person goals
+  const board = document.createElement('div');
+  board.className = 'aid-board';
+  board.innerHTML = `
+    <h3>1–3 Month Goals</h3>
+    <div class="aid-columns">
+      <div class="aid-col">
+        <h4>Active</h4>
+        <ul>
+          <li>Goal A (4.5)</li>
+        </ul>
+      </div>
+      <div class="aid-col">
+        <h4>Incubating</h4>
+        <ul>
+          <li>Goal B (3.8)</li>
+          <li>Goal C (3.6)</li>
+        </ul>
+      </div>
+      <div class="aid-col">
+        <h4>Dormant</h4>
+        <ul>
+          <li>Goal D (2.9)</li>
+          <li>Goal E (2.5)</li>
+        </ul>
+      </div>
+    </div>`;
+  container.appendChild(board);
+  // Append static selected goal
+  const selected = document.createElement('div');
+  selected.className = 'selected-goals';
+  selected.innerHTML = `
+    <h3>Selected Active Goal</h3>
+    <div class="goal">
+      <h4>${dir.title} milestone</h4>
+      <p><strong>Frequency:</strong> 3x/week&nbsp;&nbsp;<strong>Duration:</strong> 30&nbsp;min</p>
+      <p><strong>If‑Then:</strong> If session missed → reschedule within 24h.</p>
+      <p><strong>Rationale:</strong> Step toward personal vision.</p>
+    </div>`;
+  container.appendChild(selected);
 }
 
 // Render play skill directions
@@ -448,6 +489,46 @@ function renderPlaySkillDetails(dir) {
   ul.appendChild(renderTree(dir.tree));
   treeContainer.appendChild(ul);
   container.appendChild(treeContainer);
+
+  // Append static AID board for play skill goals
+  const board = document.createElement('div');
+  board.className = 'aid-board';
+  board.innerHTML = `
+    <h3>1–3 Month Goals</h3>
+    <div class="aid-columns">
+      <div class="aid-col">
+        <h4>Active</h4>
+        <ul>
+          <li>Practice basics (4.3)</li>
+        </ul>
+      </div>
+      <div class="aid-col">
+        <h4>Incubating</h4>
+        <ul>
+          <li>Improv drills (3.5)</li>
+          <li>Ear training (3.3)</li>
+        </ul>
+      </div>
+      <div class="aid-col">
+        <h4>Dormant</h4>
+        <ul>
+          <li>Choir season (2.5)</li>
+        </ul>
+      </div>
+    </div>`;
+  container.appendChild(board);
+  // Append static selected goal
+  const selected = document.createElement('div');
+  selected.className = 'selected-goals';
+  selected.innerHTML = `
+    <h3>Selected Active Goal</h3>
+    <div class="goal">
+      <h4>${dir.title} session</h4>
+      <p><strong>Frequency:</strong> 4x/week&nbsp;&nbsp;<strong>Duration:</strong> 45&nbsp;min</p>
+      <p><strong>If‑Then:</strong> If rehearsal skipped → play 15 min later.</p>
+      <p><strong>Rationale:</strong> Builds competency for showcase.</p>
+    </div>`;
+  container.appendChild(selected);
 }
 
 // Tab switching

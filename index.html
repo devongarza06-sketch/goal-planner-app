@@ -267,6 +267,66 @@
       padding: 0.5rem 1rem;
       font-size: 0.9rem;
     }
+
+    /* AID boards */
+    .aid-board {
+      margin-bottom: 1.5rem;
+    }
+    .aid-board h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .aid-columns {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .aid-col {
+      flex: 1 1 0;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      border-radius: 6px;
+      min-width: 150px;
+    }
+    .aid-col h4 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+    .aid-col ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 0.85rem;
+    }
+    .aid-col li {
+      margin-bottom: 0.25rem;
+    }
+    /* Selected goals */
+    .selected-goals {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .selected-goals h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .selected-goals .goal {
+      margin-bottom: 0.75rem;
+    }
+    .selected-goals .goal h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+    .selected-goals .goal p {
+      font-size: 0.85rem;
+      margin-bottom: 0.25rem;
+    }
   </style>
 </head>
 <body>
@@ -310,6 +370,79 @@
       </div>
       <!-- Direction details area -->
       <div id="passion-details"></div>
+
+      <!-- AID boards for passion -->
+      <div class="aid-board">
+        <h3>Annual Themes</h3>
+        <div class="aid-columns">
+          <div class="aid-col">
+            <h4>Active</h4>
+            <ul>
+              <li>Theme A (Impact 4.8)</li>
+              <li>Theme B (Impact 4.5)</li>
+              <li>Theme C (Impact 4.2)</li>
+            </ul>
+          </div>
+          <div class="aid-col">
+            <h4>Incubating</h4>
+            <ul>
+              <li>Theme D (3.9)</li>
+              <li>Theme E (3.5)</li>
+              <li>Theme F (3.2)</li>
+            </ul>
+          </div>
+          <div class="aid-col">
+            <h4>Dormant</h4>
+            <ul>
+              <li>Theme G (2.8)</li>
+              <li>Theme H (2.5)</li>
+            </ul>
+          </div>
+        </div>
+        <h3>1–3 Month Goals</h3>
+        <div class="aid-columns">
+          <div class="aid-col">
+            <h4>Active</h4>
+            <ul>
+              <li>Goal 1 (Impact 4.6)</li>
+              <li>Goal 2 (4.4)</li>
+              <li>Goal 3 (4.1)</li>
+            </ul>
+          </div>
+          <div class="aid-col">
+            <h4>Incubating</h4>
+            <ul>
+              <li>Goal 4 (3.7)</li>
+              <li>Goal 5 (3.6)</li>
+              <li>Goal 6 (3.3)</li>
+            </ul>
+          </div>
+          <div class="aid-col">
+            <h4>Dormant</h4>
+            <ul>
+              <li>Goal 7 (2.4)</li>
+              <li>Goal 8 (2.2)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selected active 1-3 month goals for passion -->
+      <div class="selected-goals">
+        <h3>Selected Active 1–3 Month Goals</h3>
+        <div class="goal">
+          <h4>Write first 20k words</h4>
+          <p><strong>Frequency:</strong> 5x/week&nbsp;&nbsp;<strong>Duration:</strong> 1&nbsp;hr</p>
+          <p><strong>If‑Then map:</strong> If mood is low → run 5‑minute freewriting to warm up.</p>
+          <p><strong>Rationale:</strong> Builds momentum toward novel draft.</p>
+        </div>
+        <div class="goal">
+          <h4>Complete clinical shifts</h4>
+          <p><strong>Frequency:</strong> 2x/week&nbsp;&nbsp;<strong>Duration:</strong> 4&nbsp;hr</p>
+          <p><strong>If‑Then map:</strong> If shift cancelled → move to next available slot.</p>
+          <p><strong>Rationale:</strong> Required hours for CRNA applications.</p>
+        </div>
+      </div>
     </section>
     <!-- Person section -->
     <section id="person">
